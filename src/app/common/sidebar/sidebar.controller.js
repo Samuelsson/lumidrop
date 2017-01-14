@@ -1,6 +1,9 @@
 class SidebarController {
     constructor() {
-        this.name = 'test';
+        this.links = [
+            'home',
+            'about'
+        ];
     }
 }
 

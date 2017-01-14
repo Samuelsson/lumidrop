@@ -1,6 +1,7 @@
 <div class="sidebar">
     <ul>
-        <li><a ui-sref="home">Home</a></li>
-        <li><a ui-sref="about">About</a></li>
+        <li ng-repeat="link in $ctrl.links">
+            <a ui-sref="{{link}}">{{link}}</a>
+        </li>
     </ul>
 </div>
