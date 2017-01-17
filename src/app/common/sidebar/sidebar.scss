@@ -1,0 +1,34 @@
+// ------------------------------------------------------------
+// Component - Sidebar
+// 
+// Part of the Flexbox with order 0 for left alignment
+// ------------------------------------------------------------
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+sidebar {
+    flex: 0 0 $sidebar-width;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: $sidebar-width;
+    background-color: $dark-medium-blue;
+
+    nav {
+        ul {
+            display: block;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+}

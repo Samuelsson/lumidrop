@@ -1,11 +1,10 @@
-<div class="app">
-    <header>
-        <h1>lumiDrop header :)</h1>
-    </header>
-
-    <sidebar></sidebar>
+<div class="app-wrapper">
     
-    <div class="content" ui-view></div>
+    <sidebar></sidebar>
 
-    <footer></footer>
+    <div class="content">
+        <topbar></topbar>
+        <div class="view" ui-view></div>
+    </div>
+
 </div>

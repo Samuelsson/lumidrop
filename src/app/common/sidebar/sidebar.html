@@ -1,7 +1,9 @@
 <div class="sidebar">
-    <ul>
-        <li ng-repeat="link in $ctrl.links">
-            <a ui-sref="{{link}}">{{link}}</a>
-        </li>
-    </ul>
+    <nav role="navigation">
+        <ul>
+            <li ng-repeat="link in $ctrl.links">
+                <a ui-sref="{{link}}">{{link}}</a>
+            </li>
+        </ul>
+    </nav>
 </div>

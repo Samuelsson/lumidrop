@@ -45,8 +45,11 @@ module.exports = function makeWebpackConfig () {
                 loader: 'html',
                 exclude: /index\.html/
             }, {
-                test: /\.less$/,
-                loader: 'style!css!less'
+                test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
+                loader: 'file'
+            }, {
+                test: /\.scss$/,
+                loader: 'style!css!sass'
             }, {
                 test: /\.css$/,
                 loader: 'style!css'

@@ -1,0 +1,10 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.topbar {
+    height: $topbar-height;
+    background-color: $white;
+    border-bottom: 1px solid $light-gray;
+
+    @include box-shadow(0, 0, 2px, $gray);
+}

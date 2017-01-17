@@ -1,5 +1,6 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
+import 'normalize.css';
 
 import common from './common/common';
 import components from './components/components';
