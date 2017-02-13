@@ -1,6 +1,6 @@
 class TopbarController {
     constructor() {
-        this.message = 'topbar works just fine';
+        this.breadcrumb = 'Home / you / are / here';
     }
 }
 

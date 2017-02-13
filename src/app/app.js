@@ -15,9 +15,7 @@ angular.module('app', [
 .config(($locationProvider, $urlRouterProvider) => {
     "ngInject";
     $urlRouterProvider.otherwise('/');
-    $locationProvider
-            .html5Mode(true)
-            .hashPrefix('!');
+    $locationProvider.html5Mode(true);
 })
 
 .component('app', appComponent);

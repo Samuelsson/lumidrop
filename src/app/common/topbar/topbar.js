@@ -3,9 +3,7 @@ import uiRouter from 'angular-ui-router';
 
 import topbarComponent from './topbar.component';
 
-let topbarModule = angular.module('topbar', [
-    uiRouter
-])
+let topbarModule = angular.module('topbar', [uiRouter])
 
 .component('topbar', topbarComponent)
   

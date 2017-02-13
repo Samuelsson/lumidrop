@@ -3,7 +3,7 @@ import angular from 'angular';
 import home from './home/home';
 import about from './about/about';
 
-let componentModule = angular.module('components', [
+let componentModule = angular.module('app.components', [
     home,
     about
 ])

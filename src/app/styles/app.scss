@@ -8,9 +8,19 @@
 
 body {
     height: 100%;
-    background-color: $very-light-gray;
+    font-family: 'Lato', sans-serif;
     line-height: 1.55;
     color: $very-dark-gray;
+    background-color: $very-light-gray;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
 }
 
 // The outermost area wrapping the whole application
