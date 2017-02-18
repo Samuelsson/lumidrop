@@ -1,3 +1,5 @@
+// Mixins used for keeping code clean and simplify writing recurring snippets.
+
 // Box Shadow
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
     @if $inset {
@@ -18,7 +20,7 @@
             border-radius: $radius;
 }
 
-// Media Queries with Breakpoints from _variables
+// Media Queries with Breakpoints set in _variables
 @mixin mq-break($width, $type: min) {
     @if map_has_key($breakpoints, $width) {
         $width: map_get($breakpoints, $width);

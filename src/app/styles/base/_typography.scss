@@ -1,7 +1,9 @@
+// Everything related to fonts and typography used globally.
+
 body {
-  font-family: 'Lato', sans-serif;
-  line-height: 1.55;
-  color: $very-dark-gray;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.55;
+    color: $very-dark-gray;
 }
 
 h1,
@@ -10,5 +12,5 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
+    margin: 0;
 }
