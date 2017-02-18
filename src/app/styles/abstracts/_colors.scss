@@ -1,13 +1,15 @@
 // Global color variables used across the whole project.
+// hsl() is used for all unsaturated colors and rgb() for everything else.
 
-$red: #ef405c;
+$red: rgb(239, 64, 92);
 
-$blue: #3171d8;
-$dark-medium-blue: #2b374c;
+$blue: rgb(49, 113, 216);
+$dark-medium-blue: rgb(43, 55, 76);
 
-$white: #fff;
-$very-light-gray: #f3f3f3;
-$light-gray: #eee;
-$gray: #ccc;
-$very-dark-gray: #333;
-$black: #000;
+// Unsaturated colors in hsl().
+$white: hsl(0, 0%, 100%);
+$very-light-gray: hsl(0, 0%, 95%);
+$light-gray: hsl(0, 0%, 93%);
+$gray: hsl(0, 0%, 80%);
+$very-dark-gray: hsl(0, 0%, 20%);
+$black: hsl(0, 0%, 0%);
