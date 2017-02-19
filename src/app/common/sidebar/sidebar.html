@@ -1,8 +1,13 @@
-<div class="sidebar">
+<div class="sidebar-wrapper">
+    <div class="logo">:)</div>
+
     <nav role="navigation">
         <ul>
             <li ng-repeat="link in $ctrl.links">
-                <a ui-sref="{{link}}">{{link}}</a>
+                <a ui-sref="{{link}}">
+                    <img src="../../../assets/icons/ic_home_white_24px.svg" alt="">
+                    {{link}}
+                </a>
             </li>
         </ul>
     </nav>

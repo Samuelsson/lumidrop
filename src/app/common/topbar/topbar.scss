@@ -1,19 +1,16 @@
 @import '../../styles/abstracts';
 
-.topbar {
+$topbar-background-color: $white;
+
+.topbar-wrapper {
     display: flex;
+    align-items: center;
     height: $topbar-height;
-    background-color: $white;
+    background-color: $topbar-background-color;
 
     @include box-shadow(0, 0, 2px, $gray);
 
     .breadcrumb {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-
         padding-left: 20px;
     }
 }

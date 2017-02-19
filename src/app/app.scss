@@ -6,8 +6,8 @@ app {
         display: flex;
     }
 
-    // The main flex area without sidebars
-    .content {
+    // The main flex area without the left sidebar
+    .main {
         flex: 1 1;
     }
 
