@@ -1,0 +1,11 @@
+@import '../../styles/abstracts';
+
+.sidebar {
+    position: fixed;
+    z-index: 999;
+    width: $sidebar-right-width;
+    height: calc(100% - #{$topbar-height});
+    flex: 0 0 $sidebar-right-width;
+    order: 1;
+    background-color: $white;
+}
