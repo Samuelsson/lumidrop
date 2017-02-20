@@ -14,6 +14,11 @@
             flex: 1;
             margin-left: $sidebar-width;
             padding: 10px;
+
+            // Todo: make this more beautiful - Sets margin when right sidebar is visible
+            @include mq-break('medium') {
+                margin-right: $sidebar-right-width;
+            }
         }
     }
 }

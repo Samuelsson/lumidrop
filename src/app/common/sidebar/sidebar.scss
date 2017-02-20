@@ -9,6 +9,7 @@ $sidebar-background-color: $dark-medium-blue;
 
 .sidebar {
     position: fixed;
+    z-index: 1500;
     width: $sidebar-width;
     height: calc(100% - #{$topbar-height});
     flex: 0 0 $sidebar-width;
