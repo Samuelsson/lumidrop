@@ -13,7 +13,7 @@
     @include box-shadow(0, 0, 3px, $gray);
 
     // Hide the right sidebar when screen is "huge".
-    @include mq-break('huge', max) {
+    @include mq-break('medium', max) {
         display: none;
     }
 }
