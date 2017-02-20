@@ -1,7 +1,7 @@
-class RightSidebarController {
+class SidebarRightController {
     constructor() {
         this.message = 'Right sidebar works :)';
     }
 }
 
-export default RightSidebarController;
+export default SidebarRightController;

@@ -1,0 +1,19 @@
+@import '../../styles/abstracts';
+
+.sidebar-right {
+    position: fixed;
+    z-index: 999;
+    right: 0;
+    width: $sidebar-right-width;
+    height: calc(100% - #{$topbar-height});
+    flex: 0 0 $sidebar-right-width;
+    order: 1;
+    background-color: $white;
+
+    @include box-shadow(0, 0, 3px, $gray);
+
+    // Hide the right sidebar when screen is "huge".
+    @include mq-break('huge', max) {
+        display: none;
+    }
+}
