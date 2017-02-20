@@ -1,18 +1,19 @@
-@import 'styles/abstracts';
+@import './styles/abstracts';
 
-app {
-    // The outermost area wrapping the whole application
-    .app-wrapper {
+.app {
+    display: flex;
+    flex-direction: column;
+
+    .content {
         display: flex;
-    }
+        flex-direction: row;
+        flex-grow: 1;
+        margin-top: $topbar-height;
 
-    // The main flex area without the left sidebar
-    .main {
-        flex: 1 1;
-    }
-
-    // The ui-view where the pages dynamically load
-    .view {
-        padding: 10px;
+        main {
+            flex: 1;
+            margin-left: $sidebar-width;
+            padding: 10px;
+        }
     }
 }

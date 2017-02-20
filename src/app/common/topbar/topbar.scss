@@ -1,14 +1,23 @@
 @import '../../styles/abstracts';
 
 $topbar-background-color: $white;
+$header-logo-background-color: $dark-medium-blue;
 
-.topbar-wrapper {
+header {
+    position: fixed;
     display: flex;
     align-items: center;
+    width: 100%;
     height: $topbar-height;
     background-color: $topbar-background-color;
 
-    @include box-shadow(0, 0, 2px, $gray);
+    @include box-shadow(0, 0, 3px, $gray);
+
+    .header-logo {
+        width: $sidebar-width;
+        height: 100%;
+        background-color: $header-logo-background-color;
+    }
 
     .breadcrumb {
         padding-left: 20px;

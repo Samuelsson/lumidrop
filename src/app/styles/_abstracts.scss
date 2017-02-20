@@ -1,4 +1,6 @@
 // Gathers all tools and helpers used across the project.
+
+// Needs to be imported in each SCSS file in order to use these abstracts.
 // Should not output a single line of CSS when compiled on its own.
 
 @import './abstracts/colors';
