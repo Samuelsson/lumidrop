@@ -1,5 +1,9 @@
 // The base styling used globally that is not part of a component.
 
+html {
+    height: 100%;
+}
+
 body {
     height: 100%;
     background-color: $very-light-gray;
