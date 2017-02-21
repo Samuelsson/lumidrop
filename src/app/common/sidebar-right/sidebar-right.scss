@@ -9,11 +9,8 @@
     flex: 0 0 $sidebar-right-width;
     order: 1;
     background-color: $white;
-
     @include box-shadow(0, 0, 3px, $gray);
 
-    // Hide the right sidebar when screen is "huge".
-    @include mq-break('medium', max) {
-        display: none;
-    }
+    // Hide the right sidebar when screen is "medium".
+    @include mq-break('medium', max) { display: none; }
 }

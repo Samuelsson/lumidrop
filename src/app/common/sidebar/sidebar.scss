@@ -1,11 +1,6 @@
-// ------------------------------------------------------------
-// Component - Sidebar
-//
-// Part of the Flexbox with order 0 for left alignment
-// ------------------------------------------------------------
 @import '../../styles/abstracts';
 
-$sidebar-background-color: $dark-medium-blue;
+$sidebar-background-color: $very-dark-blue;
 
 .sidebar {
     position: fixed;
@@ -17,6 +12,8 @@ $sidebar-background-color: $dark-medium-blue;
     background-color: $sidebar-background-color;
 
     nav {
+        padding-top: 15px;
+
         ul {
             margin: 0;
             padding: 0;
@@ -35,9 +32,7 @@ $sidebar-background-color: $dark-medium-blue;
                     text-transform: uppercase;
                     color: $white;
 
-                    img {
-                        margin-right: 10px;
-                    }
+                    img { margin-right: 10px; }
                 }
             }
         }
