@@ -4,20 +4,22 @@ import uiRouter from 'angular-ui-router';
 import 'normalize.css';
 import './styles/main.scss';
 
-import common from './common/common';
-import components from './components/components';
 import appComponent from './app.component';
+import commonModule from './common/common';
+import componentsModule from './components/components';
 
-angular.module('app', [
-    uiRouter,
-    components,
-    common
-])
+let appModule = angular
+    .module('app', [
+        uiRouter,
+        componentsModule,
+        commonModule
+    ])
+    .component('app', appComponent)
+    .config(($locationProvider, $urlRouterProvider) => {
+        'ngInject';
+        $urlRouterProvider.otherwise('/');
+        $locationProvider.html5Mode(true);
+    })
+    .name;
 
-.config(($locationProvider, $urlRouterProvider) => {
-    "ngInject";
-    $urlRouterProvider.otherwise('/');
-    $locationProvider.html5Mode(true);
-})
-
-.component('app', appComponent);
+export default appModule;

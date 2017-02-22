@@ -1,13 +1,13 @@
 import angular from 'angular';
 
-import home from './home/home';
-import about from './about/about';
+import homeModule from './home/home';
+import aboutModule from './about/about';
 
-let componentModule = angular.module('app.components', [
-    home,
-    about
-])
-
-.name;
+let componentModule = angular
+    .module('app.components', [
+        homeModule,
+        aboutModule
+    ])
+    .name;
 
 export default componentModule;
