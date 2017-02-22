@@ -16,7 +16,7 @@ module.exports = function makeWebpackConfig () {
         config.devtool = 'cheap-eval-source-map';
     }
 
-    config.entry = ['./src/app/app.js'];
+    config.entry = ['./src/app/app.module.js'];
 
     if (isDev) {
         config.entry.push(

@@ -1,7 +1,7 @@
 import angular from 'angular';
 
-import homeModule from './home/home';
-import aboutModule from './about/about';
+import homeModule from './home/home.module';
+import aboutModule from './about/about.module';
 
 let componentModule = angular
     .module('app.components', [
