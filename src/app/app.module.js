@@ -7,12 +7,14 @@ import './styles/main.scss';
 import appComponent from './app.component';
 import commonModule from './common/common.module';
 import componentsModule from './components/components.module';
+import sectionsModule from './sections/sections.module';
 
 let appModule = angular
     .module('app', [
         uiRouter,
         componentsModule,
-        commonModule
+        commonModule,
+        sectionsModule
     ])
     .component('app', appComponent)
     .config(($locationProvider, $urlRouterProvider) => {
