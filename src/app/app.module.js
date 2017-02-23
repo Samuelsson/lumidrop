@@ -1,3 +1,7 @@
+/**
+ * The root module bootstrapping the application and importing other modules.
+ * Also applying base styles that are outside the actual app scope. Site wide on the body tag for example.
+ */
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
