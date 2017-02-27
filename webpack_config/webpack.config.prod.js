@@ -1,6 +1,6 @@
 'use strict';
 
-process.env.NODE_ENV = 'prod';
+process.env.NODE_ENV = 'production';
 
 const webpack = require('webpack');
 const base = require('./webpack.config.base');
