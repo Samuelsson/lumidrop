@@ -2,13 +2,19 @@
 
     <nav role="navigation">
         <ul>
-            <li ng-repeat="link in $ctrl.links">
+            <li ui-sref-active="active" ng-repeat="link in $ctrl.links">
                 <a ui-sref="{{link}}">
-                    <img src="../../../assets/icons/ic_home_white_24px.svg" alt="">
+                    <i>
+                        <img src="../../../assets/icons/ic_home_white_24px.svg" alt="">
+                    </i>
                     {{link}}
                 </a>
             </li>
         </ul>
     </nav>
+
+    <div class="navbar-footer">
+        <3
+    </div>
 
 </div>
