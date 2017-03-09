@@ -10,9 +10,15 @@ $navbar-background-color: $very-dark-blue;
     flex: 0 0 $navbar-width;
     order: -1;
     background-color: $navbar-background-color;
+    color: $white;
 
     nav {
         padding-top: 15px;
+        height: calc(100% - #{$navbar-footer-height} - 15px); // subtract navbar-footer and nav top padding
+        width: 100%;
+        text-align: center;
+        overflow-y: auto;
+        overflow-x: hidden;
 
         ul {
             margin: 0;
@@ -20,21 +26,35 @@ $navbar-background-color: $very-dark-blue;
             list-style: none;
 
             li {
-                &:hover {
-                    background-color: ($navbar-background-color - 15%);
+                &.active {
                     @include box-shadow(3px, 0, 0, $white, true);
                 }
 
+                &:hover {
+                    background-color: ($navbar-background-color - 15%);
+                }
+
                 a {
-                    display: flex;
-                    padding: 5px 20px;
+                    display: block;
+                    padding: 5px;
+                    color: $white;
                     text-decoration: none;
                     text-transform: uppercase;
-                    color: $white;
 
-                    img { margin-right: 10px; }
+                    i {
+                        display: block;
+                        line-height: 0;
+                    }
                 }
             }
         }
+    }
+
+    .navbar-footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: $navbar-footer-height;
+        text-align: center;
     }
 }
