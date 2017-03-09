@@ -1,15 +1,15 @@
 @import '../../styles/abstracts';
 
-$sidebar-background-color: $very-dark-blue;
+$navbar-background-color: $very-dark-blue;
 
-.sidebar {
+.navbar {
     position: fixed;
     z-index: 1500;
-    width: $sidebar-width;
+    width: $navbar-width;
     height: calc(100% - #{$topbar-height});
-    flex: 0 0 $sidebar-width;
+    flex: 0 0 $navbar-width;
     order: -1;
-    background-color: $sidebar-background-color;
+    background-color: $navbar-background-color;
 
     nav {
         padding-top: 15px;
@@ -21,7 +21,7 @@ $sidebar-background-color: $very-dark-blue;
 
             li {
                 &:hover {
-                    background-color: ($sidebar-background-color - 15%);
+                    background-color: ($navbar-background-color - 15%);
                     @include box-shadow(3px, 0, 0, $white, true);
                 }
 

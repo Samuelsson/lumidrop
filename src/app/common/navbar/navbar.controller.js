@@ -1,4 +1,4 @@
-class SidebarController {
+class NavbarController {
     constructor() {
         this.links = [
             'home',
@@ -7,4 +7,4 @@ class SidebarController {
     }
 }
 
-export default SidebarController;
+export default NavbarController;

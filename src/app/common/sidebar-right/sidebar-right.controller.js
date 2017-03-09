@@ -1,6 +1,6 @@
 class SidebarRightController {
     constructor() {
-        this.message = 'Right sidebar works :)';
+        this.message = 'Right navbar works :)';
     }
 }
 
