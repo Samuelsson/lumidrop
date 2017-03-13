@@ -5,12 +5,13 @@ $navbar-background-color: $very-dark-blue;
 .navbar {
     position: fixed;
     z-index: 1500;
-    width: $navbar-width;
+    width: $navbar-compact-width;
     height: calc(100% - #{$topbar-height});
     flex: 0 0 $navbar-width;
     order: -1;
     background-color: $navbar-background-color;
     color: $white;
+    transition: all 0.3s ease;
 
     nav {
         padding-top: 15px;
@@ -26,13 +27,9 @@ $navbar-background-color: $very-dark-blue;
             list-style: none;
 
             li {
-                &.active {
-                    @include box-shadow(3px, 0, 0, $white, true);
-                }
+                &.active { @include box-shadow(3px, 0, 0, $blue, true); }
 
-                &:hover {
-                    background-color: ($navbar-background-color - 15%);
-                }
+                &:hover { background-color: ($navbar-background-color - 15%); }
 
                 a {
                     display: block;
@@ -45,6 +42,26 @@ $navbar-background-color: $very-dark-blue;
                         display: block;
                         line-height: 0;
                     }
+                }
+            }
+        }
+    }
+
+    @include mq-break('medium') {
+        width: $navbar-width;
+        transition: all 0.3s ease;
+
+        nav {
+            text-align: left;
+
+            ul li a {
+                display: flex;
+                align-items: center;
+                padding: 5px 15px 5px;
+
+                i {
+                    display: inline-block;
+                    padding-right: 10px;
                 }
             }
         }

@@ -1,7 +1,7 @@
 @import '../../styles/abstracts';
 
-$topbar-background-color: $white;
-$header-logo-background-color: $very-dark-blue;
+$topbar-background-color: $very-dark-blue;
+$header-logo-background-color: $blue;
 
 header {
     position: fixed;
@@ -12,16 +12,21 @@ header {
     height: $topbar-height;
     background-color: $topbar-background-color;
     @include box-shadow(0, 0, 3px, $gray);
+    color: $white;
 
     .header-logo {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: $navbar-width;
+        width: $navbar-compact-width;
         height: 100%;
         background-color: $header-logo-background-color;
+        transition: all 0.3s ease;
 
-        img { height: 60%; }
+        @include mq-break('medium') {
+            width: $navbar-width;
+            transition: all 0.3s ease;
+        }
     }
 
     .breadcrumb { padding-left: 20px; }

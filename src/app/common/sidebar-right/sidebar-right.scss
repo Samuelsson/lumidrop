@@ -10,7 +10,11 @@
     order: 1;
     background-color: $white;
     @include box-shadow(0, 0, 3px, $gray);
+    transition: all 0.3s ease;
 
     // Hide the right sidebar when screen is "medium".
-    @include mq-break('medium', max) { display: none; }
+    @include mq-break('huge', max) {
+        display: none;
+        transition: all 0.3s ease;
+    }
 }
