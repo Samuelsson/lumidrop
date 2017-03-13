@@ -14,17 +14,17 @@
             flex: 1;
             margin-left: $navbar-compact-width;
             padding: 10px;
-            transition: all 0.3s ease;
+            @include responsive-ease-transition();
 
             // Todo: make this more beautiful - Sets margin only here, should be set in only one place maybe
             @include mq-break('medium') {
                 margin-left: $navbar-width;
-                transition: all 0.3s ease;
+                @include responsive-ease-transition();
             }
 
             @include mq-break('huge') {
                 margin-right: $sidebar-right-width;
-                transition: all 0.3s ease;
+                @include responsive-ease-transition();
             }
         }
     }

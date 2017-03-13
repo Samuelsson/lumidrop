@@ -21,11 +21,11 @@ header {
         width: $navbar-compact-width;
         height: 100%;
         background-color: $header-logo-background-color;
-        transition: all 0.3s ease;
+        @include responsive-ease-transition();
 
         @include mq-break('medium') {
             width: $navbar-width;
-            transition: all 0.3s ease;
+            @include responsive-ease-transition();
         }
     }
 
