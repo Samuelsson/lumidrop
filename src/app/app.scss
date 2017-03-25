@@ -12,12 +12,19 @@
 
         main {
             flex: 1;
-            margin-left: $navbar-width;
+            margin-left: $navbar-compact-width;
             padding: 10px;
+            @include responsive-ease-transition();
 
-            // Todo: make this more beautiful - Sets margin when right sidebar is visible
+            // Todo: make this more beautiful - Sets margin only here, should be set in only one place maybe
             @include mq-break('medium') {
+                margin-left: $navbar-width;
+                @include responsive-ease-transition();
+            }
+
+            @include mq-break('huge') {
                 margin-right: $sidebar-right-width;
+                @include responsive-ease-transition();
             }
         }
     }
