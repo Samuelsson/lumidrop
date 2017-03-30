@@ -21,7 +21,11 @@ const toSnakeCase = (val) => {
     return val.replace(/([a-zA-Z])(?=[A-Z])/g, '$1-').toLowerCase();
 };
 
-const taskRunner = (name, srcPath, destPath, endMsg) => {
+const gulpTaskRunner = (srcName, destPath, logMsg) => {
+    const name = yargs.argv.name;
+    const srcPath = path.join(paths.templates, ('' + srcName + '/**/*.**'));
+    const destination = path.join(destPath, toSnakeCase(name));
+
     return gulp.src(srcPath)
         .pipe(template({
             name: name,
@@ -31,8 +35,8 @@ const taskRunner = (name, srcPath, destPath, endMsg) => {
         .pipe(rename((path) => {
             path.basename = path.basename.replace('temp', toSnakeCase(name));
         }))
-        .pipe(gulp.dest(destPath))
-        .on('end', () => gutil.log('\n --- \n ' + endMsg + ' \n ---'));
+        .pipe(gulp.dest(destination))
+        .on('end', () => gutil.log('\n --- \n ' + logMsg + ' \n ---'));
 };
 
 /**
@@ -42,12 +46,11 @@ const taskRunner = (name, srcPath, destPath, endMsg) => {
  * Run command: npm run component -- --name newComponentNameInCamelCase
  */
 gulp.task('component', () => {
-    const name = yargs.argv.name;
-    const srcPath = path.join(paths.templates, 'component/**/*.**');
-    const destPath = path.join(paths.components, toSnakeCase(name));
-    const msg = 'Now modify components.module if ready to be used in app';
+    const srcName = 'component';
+    const destPath = paths.components;
+    const msg = 'Now add the new component to components.module if ready to be used in app';
 
-    return taskRunner(name, srcPath, destPath, msg);
+    return gulpTaskRunner(srcName, destPath, msg);
 });
 
 /**
@@ -57,10 +60,9 @@ gulp.task('component', () => {
  * Run command: npm run section -- --name newSectionNameInCamelCase
  */
 gulp.task('section', () => {
-    const name = yargs.argv.name;
-    const srcPath = path.join(paths.templates, 'section/**/*.**');
-    const destPath = path.join(paths.sections, toSnakeCase(name));
-    const msg = 'Now modify section.module and add to nav if ready to be used in app';
+    const srcName = 'section';
+    const destPath = paths.sections;
+    const msg = 'Now add the new section to section.module and to navigation menu if ready to be used in app';
 
-    return taskRunner(name, srcPath, destPath, msg);
+    return gulpTaskRunner(srcName, destPath, msg);
 });
