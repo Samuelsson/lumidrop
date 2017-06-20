@@ -1,21 +1,50 @@
 // Global color variables used across the whole project.
 // hsl() is used for unsaturated colors and rgb() for everything else.
 
-$red: rgb(239, 64, 92);
 
-$green: rgb(75, 176, 109);
+// ------------------------------------------------------------
+// Normal color declaration
+// ------------------------------------------------------------
 
-$very-light-blue: rgb(241, 243, 249);
-$blue: rgb(98, 123, 207);
-$very-dark-blue: rgb(38, 42, 55);
+// Blue Gray
+$extremely-light-blue-gray: rgb(251, 252, 252);
+$very-light-blue-gray:      rgb(243, 244, 246);
+$light-blue-gray:           rgb(200, 202, 210);
 
+// Blue
+$very-light-blue: rgb(139, 246, 255);
+$light-blue:      rgb(79, 195, 247);
+$blue:            rgb(0, 147, 196);
+$dark-blue:       rgb(0, 72, 105);
+$very-dark-blue:  rgb(25, 25, 50);
+
+// Others - non-grouped
+$red:       rgb(239, 64, 92);
+$green:     rgb(75, 176, 109);
 $turquoise: rgb(75, 146, 159);
 
 // Unsaturated colors in hsl().
-$white: hsl(0, 0%, 100%);
+$white:           hsl(0, 0%, 100%);
 $very-light-gray: hsl(0, 0%, 95%);
-$light-gray: hsl(0, 0%, 93%);
-$gray: hsl(0, 0%, 80%);
-$medium-gray: hsl(0, 0%, 50%);
-$very-dark-gray: hsl(0, 0%, 20%);
-$black: hsl(0, 0%, 0%);
+$light-gray:      hsl(0, 0%, 93%);
+$gray:            hsl(0, 0%, 80%);
+$medium-gray:     hsl(0, 0%, 50%);
+$very-dark-gray:  hsl(0, 0%, 19%);
+$black:           hsl(0, 0%, 0%);
+
+
+// ------------------------------------------------------------
+// Color Palettes
+// ------------------------------------------------------------
+$color-primary:         $very-light-blue-gray;
+$color-primary-light:   $extremely-light-blue-gray;
+$color-primary-dark:    $light-blue-gray;
+
+$color-secondary:       $blue;
+$color-secondary-light: $light-blue;
+$color-secondary-dark:  $dark-blue;
+
+// Text Palettes
+$color-primary-text:        $very-dark-gray;
+$color-primary-text-light:  $very-light-blue-gray;
+$color-secondary-text:      $very-dark-blue;

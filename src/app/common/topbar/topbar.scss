@@ -1,33 +1,29 @@
 @import '../../styles/abstracts';
 
-$topbar-background-color: $very-dark-blue;
-$header-logo-background-color: $blue;
-
 header {
-    position: fixed;
-    z-index: 1000;
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: $topbar-height;
+  background-color: $color-secondary;
+  @include box-shadow(0, 0, 1px, $color-primary-dark);
+  color: $color-primary-text-light;
+
+  .header-logo {
     display: flex;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: $topbar-height;
-    background-color: $topbar-background-color;
-    @include box-shadow(0, 0, 3px, $gray);
-    color: $white;
+    width: $navbar-compact-width;
+    height: 100%;
+    @include responsive-ease-transition();
 
-    .header-logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: $navbar-compact-width;
-        height: 100%;
-        background-color: $header-logo-background-color;
-        @include responsive-ease-transition();
-
-        @include mq-break('medium') {
-            width: $navbar-width;
-            @include responsive-ease-transition();
-        }
+    @include mq-break('medium') {
+      width: $navbar-width;
+      @include responsive-ease-transition();
     }
+  }
 
-    .breadcrumb { padding-left: 20px; }
+  .breadcrumb { padding-left: 20px; }
 }
