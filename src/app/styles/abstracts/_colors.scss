@@ -10,6 +10,11 @@
 $extremely-light-blue-gray: rgb(251, 252, 252);
 $very-light-blue-gray:      rgb(243, 244, 246);
 $light-blue-gray:           rgb(200, 202, 210);
+$blue-gray:                 rgb(145, 147, 155);
+$medium-blue-gray:          rgb(95, 97, 105);
+$dark-blue-gray:            rgb(45, 47, 55);
+$very-dark-blue-gray:       rgb(35, 37, 45);
+$extremely-dark-blue-gray:  rgb(25, 27, 35);
 
 // Blue
 $very-light-blue: rgb(139, 246, 255);
@@ -29,6 +34,7 @@ $very-light-gray: hsl(0, 0%, 95%);
 $light-gray:      hsl(0, 0%, 93%);
 $gray:            hsl(0, 0%, 80%);
 $medium-gray:     hsl(0, 0%, 50%);
+$dark-gray:       hsl(0, 0%, 33%);
 $very-dark-gray:  hsl(0, 0%, 19%);
 $black:           hsl(0, 0%, 0%);
 
@@ -36,15 +42,18 @@ $black:           hsl(0, 0%, 0%);
 // ------------------------------------------------------------
 // Color Palettes
 // ------------------------------------------------------------
-$color-primary:         $very-light-blue-gray;
-$color-primary-light:   $extremely-light-blue-gray;
-$color-primary-dark:    $light-blue-gray;
-
-$color-secondary:       $blue;
 $color-secondary-light: $light-blue;
+$color-secondary:       $blue;
 $color-secondary-dark:  $dark-blue;
 
-// Text Palettes
+$color-secondary-text:      $very-light-blue-gray;
+$color-secondary-text-dark: $very-dark-blue;
+
+// Light Theme
+$color-primary-light:       $extremely-light-blue-gray;
+$color-primary:             $very-light-blue-gray;
+$color-primary-dark:        $light-blue-gray;
+
+$color-primary-text-light:  $blue-gray;
 $color-primary-text:        $very-dark-gray;
-$color-primary-text-light:  $very-light-blue-gray;
-$color-secondary-text:      $very-dark-blue;
+$color-primary-text-dark:   $very-dark-blue;
