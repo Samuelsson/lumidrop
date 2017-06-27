@@ -1,0 +1,22 @@
+@import '../../../styles/abstracts';
+
+$sidebar-right-background-color: $color-primary-light;
+
+.sidebar-right {
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  width: $sidebar-right-width;
+  height: calc(100% - #{$topbar-height});
+  flex: 0 0 $sidebar-right-width;
+  order: 1;
+  background-color: $sidebar-right-background-color;
+  @include box-shadow(0, 0, 1px, $color-primary-dark);
+  @include responsive-ease-transition();
+
+  // Hide the right sidebar when screen is "medium" or smaller.
+  @include mq-break('huge', max) {
+    width: 0;
+    @include responsive-ease-transition();
+  }
+}

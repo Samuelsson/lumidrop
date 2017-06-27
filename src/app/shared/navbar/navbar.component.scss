@@ -1,0 +1,65 @@
+@import '../../../styles/abstracts';
+
+.navbar {
+  position: fixed;
+  z-index: 1500;
+  width: $navbar-compact-width;
+  height: calc(100% - #{$topbar-height});
+  flex: 0 0 $navbar-width;
+  order: -1;
+  background-color: $color-primary-light;
+  color: $color-primary-text;
+  @include box-shadow(0, 0, 1px, $color-primary-dark);
+  @include responsive-ease-transition();
+
+  nav {
+    padding-top: 15px;
+    height: calc(100% - #{$navbar-footer-height} - 15px); // subtract navbar-footer and nav top padding
+    width: 100%;
+    text-align: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        &.active { @include box-shadow(3px, 0, 0, $color-secondary, true); }
+        &:hover { background-color: $color-primary; }
+
+        a {
+          display: block;
+          padding: 5px;
+          color: $color-primary-text;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  @include mq-break('medium') {
+    width: $navbar-width;
+    @include responsive-ease-transition();
+
+    nav {
+      text-align: left;
+
+      ul li a {
+        display: flex;
+        align-items: center;
+        padding: 5px 15px 5px;
+      }
+    }
+  }
+
+  .navbar-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: $navbar-footer-height;
+    text-align: center;
+  }
+}
