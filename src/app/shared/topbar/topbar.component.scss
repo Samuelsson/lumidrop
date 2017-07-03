@@ -7,8 +7,8 @@ header {
   align-items: center;
   width: 100%;
   height: $topbar-height;
-  background-color: $color-secondary;
-  color: $color-secondary-text;
+  background-color: $extremely-light-blue-gray;
+  color: $color-primary-text;
   @include box-shadow(0, 0, 1px, $color-primary-dark);
 
   .header-logo {
@@ -17,6 +17,7 @@ header {
     align-items: center;
     width: $navbar-compact-width;
     height: 100%;
+    background-color: $color-secondary;
     @include responsive-ease-transition();
 
     @include mq-break('medium') {

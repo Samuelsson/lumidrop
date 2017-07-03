@@ -7,8 +7,8 @@
   height: calc(100% - #{$topbar-height});
   flex: 0 0 $navbar-width;
   order: -1;
-  background-color: $color-primary-light;
-  color: $color-primary-text;
+  background-color: $dark-blue-gray;
+  color: $color-secondary-text;
   @include box-shadow(0, 0, 1px, $color-primary-dark);
   @include responsive-ease-transition();
 
@@ -27,14 +27,16 @@
 
       li {
         &.active { @include box-shadow(3px, 0, 0, $color-secondary, true); }
-        &:hover { background-color: $color-primary; }
+        &:hover { background-color: $very-dark-blue-gray; }
 
         a {
           display: block;
           padding: 5px;
-          color: $color-primary-text;
+          color: $color-secondary-text-medium;
           text-decoration: none;
           text-transform: uppercase;
+
+          &.active { color: $color-secondary-text; }
         }
       }
     }

@@ -12,15 +12,15 @@ $very-light-blue-gray:      rgb(243, 244, 246);
 $light-blue-gray:           rgb(200, 202, 210);
 $blue-gray:                 rgb(145, 147, 155);
 $medium-blue-gray:          rgb(95, 97, 105);
-$dark-blue-gray:            rgb(45, 47, 55);
-$very-dark-blue-gray:       rgb(35, 37, 45);
+$dark-blue-gray:            rgb(40, 50, 70);
+$very-dark-blue-gray:       rgb(35, 42, 50);
 $extremely-dark-blue-gray:  rgb(25, 27, 35);
 
 // Blue
 $very-light-blue: rgb(139, 246, 255);
 $light-blue:      rgb(79, 195, 257);
-$blue:            rgb(0, 147, 206);
-$dark-blue:       rgb(0, 72, 115);
+$blue:            rgb(30, 135, 196);
+$dark-blue:       rgb(20, 72, 115);
 $very-dark-blue:  rgb(25, 25, 50);
 
 // Others - non-grouped
@@ -46,8 +46,9 @@ $color-secondary-light: $light-blue;
 $color-secondary:       $blue;
 $color-secondary-dark:  $dark-blue;
 
-$color-secondary-text:      $very-light-blue-gray;
-$color-secondary-text-dark: $very-dark-blue;
+$color-secondary-text:        $very-light-blue-gray;
+$color-secondary-text-medium: $light-blue-gray;
+$color-secondary-text-dark:   $very-dark-blue;
 
 // Light Theme
 $color-primary-light:       $extremely-light-blue-gray;
