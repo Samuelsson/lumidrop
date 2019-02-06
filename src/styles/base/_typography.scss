@@ -1,0 +1,33 @@
+body {
+    color: #555;
+    font-weight: 300;
+    font-size: 16px;
+    font-family: 'Noto Sans', 'Helvetica', 'Arial', sans-serif;
+    line-height: 1.55;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: $blue;
+    font-weight: bold;
+
+    &:hover { color: $blue-gray; }
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    line-height: inherit;
+}

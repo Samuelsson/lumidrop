@@ -1,0 +1,12 @@
+input {
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+    border: 1px solid #eaeaea;
+
+    &:focus {
+        outline: none;
+        @include box-shadow(0, 0, 5px, rgba(0, 0, 0, .1));
+    }
+}

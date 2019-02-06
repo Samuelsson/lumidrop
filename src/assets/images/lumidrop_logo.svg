@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 200 283" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>lumiDrop logo</title>
+    <desc>lumiDrop logo</desc>
+    <defs>
+        <path d="M0,182.244842 C0,237.473317 50,282.244842 100,282.244842 C150,282.244842 200,237.473317 200,182.244842 C200,163.407438 194.791437,145.786558 185.735921,130.743814 L117.49856,12.5532372 C107.834372,-4.18562731 92.1642249,-4.18319747 82.5014398,12.5532372 L14.2640786,130.743814 C5.20856278,145.786558 0,163.407438 0,182.244842 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#6991DC" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

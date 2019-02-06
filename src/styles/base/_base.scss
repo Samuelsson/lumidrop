@@ -1,0 +1,4 @@
+// Disable the scrolling of the html page, making the app/wrapper "fixed" in the view.
+
+html { overflow: hidden; }
+body { background-color: $light-blue-gray; }

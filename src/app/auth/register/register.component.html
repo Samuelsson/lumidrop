@@ -1,0 +1,51 @@
+<div class="register-wrapper">
+    <div class="header">
+        <img class="logo" src="../../../assets/images/lumidrop_logo.svg" alt="lumidrop logo">
+        <div><h1>Register</h1></div>
+    </div>
+    <div class="content">
+        <form novalidate [formGroup]="registerForm" (ngSubmit)="register()">
+            <label>
+                <span>Username</span>
+                <input
+                    type="text"
+                    name="username"
+                    formControlName="username">
+            </label>
+            <br>
+            <br>
+            <label>
+                <span>Password</span>
+                <input
+                    type="password"
+                    name="password"
+                    formControlName="password">
+            </label>
+            <br>
+            <br>
+            <div formGroupName="contactInformation">
+                <label>
+                    <span>First Name</span>
+                    <input
+                        type="text"
+                        name="first-name"
+                        formControlName="firstName">
+                </label>
+                <br>
+                <br>
+                <label>
+                    <span>Last Name</span>
+                    <input
+                        type="text"
+                        name="last-name"
+                        formControlName="lastName">
+                </label>
+            </div>
+            <br>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <div class="footer">
+        If you already have an account you can login <a href="#">here</a>.
+    </div>
+</div>

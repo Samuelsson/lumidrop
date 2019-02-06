@@ -1,0 +1,12 @@
+<nav>
+    <div class="nav-section" *ngFor="let navSection of navSections">
+        <div class="nav-section-header">{{ navSection.name }}</div>
+        <ul>
+            <li class="nav-item" *ngFor="let navItem of navSection.navItems" routerLinkActive="active-link">
+                <a class="nav-link" [routerLink]="navItem.path">
+                    <i class="fa fa-star"></i> {{ navItem.name }}
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

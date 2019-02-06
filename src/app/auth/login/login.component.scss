@@ -1,0 +1,71 @@
+@import "../../../styles/abstracts";
+
+$default-padding: 25px;
+
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.login-wrapper {
+    min-width: 350px;
+    background-color: $white;
+    border-radius: 3px;
+    @include box-shadow(0, 5px, 25px, rgba(0, 0, 0, 0.05));
+
+    .header {
+        border-radius: 3px 3px 0 0;
+        padding: $default-padding;
+        background-color: $very-light-blue-gray;
+        text-align: center;
+        @include box-shadow(0, 1px, 0, rgba(0, 0, 0, 0.05));
+
+        .logo {
+            width: 15%;
+            height: auto;
+        }
+    }
+
+    .content { padding: $default-padding; }
+
+    .footer {
+        padding: $default-padding;
+        border-radius: 0 0 3px 3px;
+        background-color: $very-light-blue-gray;
+        font-size: 0.8rem;
+        color: #888;
+        @include box-shadow(0, -1px, 0, rgba(0, 0, 0, 0.05));
+    }
+}
+
+// Todo: Put this in a directive/component :)
+button {
+    $button-color: $blue;
+
+    width: 100%;
+    padding: 15px;
+    background-color: $button-color;
+    color: $white;
+    border: none;
+    border-radius: 3px;
+    @include box-shadow(0, 3px, 0, ($button-color - 15%));
+
+    &:focus,
+    &:hover {
+        background-color: $button-color - 15%;
+        @include box-shadow(0, 3px, 0, ($button-color - 30%));
+        cursor: pointer;
+        outline: none;
+    }
+
+    &:active {
+        margin: 1px 0 -1px;
+        padding-top: 16px;
+        padding-bottom: 14px;
+        background-color: $button-color - 30%;
+        @include box-shadow(0, 2px, 0, ($button-color - 45%));
+    }
+}

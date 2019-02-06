@@ -1,0 +1,17 @@
+@import "../../../../styles/abstracts";
+
+:host {
+    display: block;
+    width: $sidebar-left-width;
+    height: 100%;
+    background-color: $dark-blue;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $header-height;
+    background-color: $blue;
+    color: $white;
+}

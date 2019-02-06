@@ -1,0 +1,29 @@
+@import "../../../../styles/abstracts";
+
+:host {
+    display: block;
+    height: $header-height;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    background-color: $white;
+    @include box-shadow(0, 0, 8px, rgba(0, 0, 0, .08));
+}
+
+.user-details {
+    padding-right: 25px;
+    margin-left: auto;
+}
+
+.collapse-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 25px;
+
+    &:hover { cursor: pointer; }
+}

@@ -1,0 +1,31 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "header        header header"
+        "sidebar-left  main   sidebar-right";
+    width: 100vw;
+    height: 100vh;
+
+    lumi-header {
+        grid-area: header;
+        z-index: 500;
+    }
+
+    main {
+        grid-area: main;
+        z-index: 100;
+        overflow: auto; // This needs to be moved after testing :)
+    }
+
+    lumi-sidebar-left {
+        grid-area: sidebar-left;
+        z-index: 300;
+    }
+
+    lumi-sidebar-right {
+        grid-area: sidebar-right;
+        z-index: 200;
+    }
+}
