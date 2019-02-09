@@ -15,7 +15,7 @@
     @include box-shadow(0, 10px, 35px, rgba(0, 0, 0, 0.15));
 
     .header {
-        padding: $default-padding;
+        padding: $padding-medium;
         text-align: center;
         @include box-shadow(0, 1px, 0, rgba(0, 0, 0, 0.05));
 
@@ -25,10 +25,10 @@
         }
     }
 
-    .content { padding: $default-padding; }
+    .content { padding: $padding-medium; }
 
     .footer {
-        padding: $default-padding;
+        padding: $padding-medium;
         font-size: 0.8rem;
         color: #888;
         @include box-shadow(0, -1px, 0, rgba(0, 0, 0, 0.05));
