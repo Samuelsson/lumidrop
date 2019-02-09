@@ -51,12 +51,12 @@ button {
     color: $white;
     border: none;
     border-radius: 3px;
-    @include box-shadow(0, 3px, 0, ($button-color - 15%));
+    @include box-shadow(0, 3px, 0, darken($button-color, 15%));
 
     &:focus,
     &:hover {
-        background-color: $button-color - 15%;
-        @include box-shadow(0, 3px, 0, ($button-color - 30%));
+        background-color: darken($button-color, 15%);
+        @include box-shadow(0, 3px, 0, darken($button-color, 30%));
         cursor: pointer;
         outline: none;
     }
@@ -65,7 +65,7 @@ button {
         margin: 1px 0 -1px;
         padding-top: 16px;
         padding-bottom: 14px;
-        background-color: $button-color - 30%;
-        @include box-shadow(0, 2px, 0, ($button-color - 45%));
+        background-color: darken($button-color, 30%);
+        @include box-shadow(0, 2px, 0, darken($button-color, 45%));
     }
 }
