@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './layout/header/header.component';
 import { SidebarLeftComponent } from './layout/sidebar-left/sidebar-left.component';
-import { SidebarRightComponent } from './layout/sidebar-right/sidebar-right.component';
 
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
@@ -15,8 +14,7 @@ import { DefaultViewComponent } from './pages/default-view/default-view.componen
 // We can then use the handy array spread under NgModule so we don't have a lot of duplicates.
 const layoutComponents: Array<any> = [
     HeaderComponent,
-    SidebarLeftComponent,
-    SidebarRightComponent
+    SidebarLeftComponent
 ];
 
 @NgModule({
