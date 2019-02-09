@@ -1,26 +1,49 @@
-.wrapper {
+@import "../abstracts";
+
+%default-grid {
     display: grid;
-    grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;
-    grid-template-areas:
-        "header        header"
-        "sidebar-left  main";
     width: 100vw;
     height: 100vh;
+    overflow: auto;
 
     lumi-header {
         grid-area: header;
         z-index: 500;
+        position: sticky;
+        top: 0;
     }
 
     main {
         grid-area: main;
         z-index: 100;
-        overflow: auto;
     }
 
     lumi-sidebar-left {
         grid-area: sidebar-left;
         z-index: 300;
+        position: sticky;
+        top: $header-height;
+        height: calc(100vh - #{$header-height});
+        box-sizing: border-box;
     }
+}
+
+.wrapper {
+    @extend %default-grid;
+
+    grid-template-columns: 1fr minmax(auto, $default-view-width) 1fr;
+    grid-template-areas:
+        "header header header"
+        ".      main   .";
+}
+
+
+.wrapper-full {
+    @extend %default-grid;
+
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+        "header       header"
+        "sidebar-left main";
 }

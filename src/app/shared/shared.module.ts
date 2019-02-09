@@ -9,12 +9,18 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 
 import { MainNavigationComponent } from './components/main-navigation/main-navigation.component';
 import { DefaultViewComponent } from './pages/default-view/default-view.component';
+import { FullViewComponent } from './pages/full-view/full-view.component';
 
 // To get some structure in this always-growing sharedModule, an array of each type is set up.
 // We can then use the handy array spread under NgModule so we don't have a lot of duplicates.
 const layoutComponents: Array<any> = [
     HeaderComponent,
     SidebarLeftComponent
+];
+
+const viewComponents: Array<any> = [
+    DefaultViewComponent,
+    FullViewComponent
 ];
 
 @NgModule({
@@ -24,13 +30,13 @@ const layoutComponents: Array<any> = [
     ],
     declarations: [
         ...layoutComponents,
+        ...viewComponents,
         PageNotFoundComponent,
-        MainNavigationComponent,
-        DefaultViewComponent
+        MainNavigationComponent
     ],
     exports: [
         ...layoutComponents,
-        DefaultViewComponent
+        ...viewComponents
     ]
 })
 export class SharedModule { }
