@@ -45,8 +45,6 @@ npm install
 ng serve
 ```
 
-And state what happens step-by-step. If there is any virtual environment, local server or database feeder needed, explain here.
-
 ## Configuration
 
 All environment configurations are going in the /environment folder. One for dev and one for prod.
