@@ -1,20 +1,10 @@
 @import "../../../../styles/abstracts";
 
-:host {
-    display: block;
-    height: $header-height;
-}
-
-header {
+footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    padding: $default-padding;
     background-color: $white;
     @include box-shadow(0, 0, 8px, rgba(0, 0, 0, .08));
-}
-
-.user-details {
-    padding-right: $default-padding;
-    margin-left: auto;
 }

@@ -1,8 +1,6 @@
-@import "../abstracts";
-
 %default-grid {
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto 1fr auto;
     width: 100vw;
     height: 100vh;
     overflow: auto;
@@ -27,6 +25,11 @@
         height: calc(100vh - #{$header-height});
         box-sizing: border-box;
     }
+
+    lumi-footer {
+        grid-area: footer;
+        z-index: 150;
+    }
 }
 
 .wrapper {
@@ -35,7 +38,8 @@
     grid-template-columns: 1fr minmax(auto, $default-view-width) 1fr;
     grid-template-areas:
         "header header header"
-        ".      main   .";
+        ".      main   ."
+        "footer footer footer";
 }
 
 
@@ -45,5 +49,6 @@
     grid-template-columns: auto 1fr;
     grid-template-areas:
         "header       header"
-        "sidebar-left main";
+        "sidebar-left main"
+        "sidebar-left footer";
 }
