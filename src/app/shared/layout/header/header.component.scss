@@ -14,9 +14,14 @@ header {
     @include box-shadow(0, 0, 8px, rgba(0, 0, 0, .08));
 }
 
-.user-details { padding-right: $padding-medium; }
+.user-details {
+    flex: 2;
+    padding: 0 $padding-medium;
+    text-align: right;
+}
 
 .logo {
+    flex: 2;
     height: 100%;
     box-sizing: border-box;
     padding: $padding-small $padding-medium;

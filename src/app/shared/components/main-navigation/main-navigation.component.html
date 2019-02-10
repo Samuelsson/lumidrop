@@ -1,12 +1,13 @@
-<nav>
-    <div class="nav-section" *ngFor="let navSection of navSections">
-        <div class="nav-section-header">{{ navSection.name }}</div>
-        <ul>
-            <li class="nav-item" *ngFor="let navItem of navSection.navItems" routerLinkActive="active-link">
-                <a class="nav-link" [routerLink]="navItem.path">
-                    <i class="fa fa-star"></i> {{ navItem.name }}
-                </a>
-            </li>
-        </ul>
-    </div>
+<nav class="menu">
+    <ul class="main-links">
+        <li class="nav-item" *ngFor="let navItem of navItems" routerLinkActive="active">
+            <a [routerLink]="navItem.path">{{ navItem.name }}</a>
+        </li>
+    </ul>
+
+    <ul class="sub-links">
+        <li class="nav-item" *ngFor="let subItem of subItems" routerLinkActive="active">
+            <a [routerLink]="subItem.path">{{ subItem.name }}</a>
+        </li>
+    </ul>
 </nav>

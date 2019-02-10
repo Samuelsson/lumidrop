@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 interface NavItem {
-    name: String;
-    path: String;
-    icon: String;
-    children?: NavItem[];
+    name: string;
+    path: string;
+    subItems?: NavItem[];
 }
 
 @Component({
@@ -13,28 +13,31 @@ interface NavItem {
     styleUrls: ['./main-navigation.component.scss']
 })
 export class MainNavigationComponent implements OnInit {
-    navSections: any[];
+    navItems: NavItem[];
+    subItems: NavItem[];
 
-    constructor() {
-        // It's possible to build this dynamically by importing Router.config but that way we can't get child routes for
-        // lazy loaded modules. And by building it manually we actually have more control :)
-        this.navSections = [
+    constructor(private activeRoute: ActivatedRoute) {
+        this.navItems = [
             {
-                name: 'Home',
-                navItems: [
-                    { name: 'Dashboard', path: '/home/dashboard', icon: '' }
-                ]
+                name: 'home',
+                path: '/home'
             },
             {
-                name: 'Settings',
-                navItems: [
-                    { name: 'General', path: '/settings/general', icon: '' },
-                    { name: 'Security', path: '/settings/security', icon: '' }
-                ]
+                name: 'settings',
+                path: '/settings'
             }
         ];
     }
 
     ngOnInit() {
+        this.setSubItems();
+    }
+
+    setSubItems() {
+        const location = this.activeRoute.snapshot.parent.url[0].path;
+
+        this.subItems = this.activeRoute.routeConfig.children
+            .filter(child => child.path)
+            .map(child => ({name: child.path, path: `/${location}/${child.path}`}));
     }
 }

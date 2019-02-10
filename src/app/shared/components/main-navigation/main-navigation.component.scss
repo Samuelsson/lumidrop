@@ -1,37 +1,44 @@
 @import "../../../../styles/abstracts";
 
-.nav-section {
-    color: $light-blue-gray;
-
-    .nav-section-header {
-        margin-top: 20px;
-        margin-bottom: 10px;
-        padding-left: 30px;
-        color: $blue-gray;
-    }
+nav {
+    text-align: center;
 
     ul {
         margin: 0;
         padding: 0;
 
         li {
-            display: block;
+            display: inline-block;
             list-style: none;
-
-            .nav-link {
-                display: block;
-                padding: 5px 0 5px 30px;
-                font-size: 0.8rem;
-                font-weight: normal;
-                color: $light-blue-gray;
-
-                &:hover { background-color: rgba(0, 0, 0, 0.15); }
-            }
         }
+    }
+
+    a {
+        opacity: 0.7;
+        color: $blue-gray;
+
+        &:hover { opacity: 1; }
     }
 }
 
-.active-link {
-    background-color: rgba(0, 0, 0, 0.1);
-    @include box-shadow(3px, 0, 0, $blue, true);
+.main-links {
+    text-transform: uppercase;
+
+    .nav-item:not(:last-child) {
+        padding-right: $padding-medium;
+    }
+}
+
+.sub-links {
+    text-transform: capitalize;
+    font-size: 0.8rem;
+
+    .nav-item:not(:last-child) {
+        padding-right: $padding-small;
+    }
+}
+
+.active a {
+    opacity: 1;
+    color: $blue;
 }
