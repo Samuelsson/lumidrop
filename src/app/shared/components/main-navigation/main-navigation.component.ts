@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 interface NavItem {
     name: string;
     path: string;
-    subItems?: NavItem[];
 }
 
 @Component({
@@ -13,27 +12,23 @@ interface NavItem {
     styleUrls: ['./main-navigation.component.scss']
 })
 export class MainNavigationComponent implements OnInit {
-    navItems: NavItem[];
-    subItems: NavItem[];
+    public navItems: NavItem[];
+    public subItems: NavItem[];
 
-    constructor(private activeRoute: ActivatedRoute) {
-        this.navItems = [
-            {
-                name: 'home',
-                path: '/home'
-            },
-            {
-                name: 'settings',
-                path: '/settings'
-            }
-        ];
-    }
-
-    ngOnInit() {
+    constructor(private activeRoute: ActivatedRoute, private router: Router) {
+        this.setMainItems();
         this.setSubItems();
     }
 
-    setSubItems() {
+    ngOnInit() { }
+
+    private setMainItems() {
+        this.navItems = this.router.config
+            .filter(route => route.canActivate)
+            .map(route => ({name: route.path, path: `/${route.path}`}));
+    }
+
+    private setSubItems() {
         const location = this.activeRoute.snapshot.parent.url[0].path;
 
         this.subItems = this.activeRoute.routeConfig.children
